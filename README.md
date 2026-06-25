@@ -18,13 +18,13 @@ Host `banner.html` and the `assets/` folder on your CDN or server, then put the 
 
 ## Parameters
 
-| Parameter | Required | Description |
-|---|---|---|
-| `clickLink` | Yes | The destination URL. Must be URL-encoded via `encodeURIComponent`. |
-| `utm_source` | No | Forwarded to `clickLink`. |
-| `utm_campaign` | No | Forwarded to `clickLink`. |
-| `partner_id` | No | Your partner ID for analytics. Also forwarded to `clickLink`. |
-| anything else | No | Any other query params are forwarded to the destination URL as well. |
+| Parameter      | Required | Description                                                          |
+| -------------- | -------- | -------------------------------------------------------------------- |
+| `clickLink`    | Yes      | The destination URL. Must be URL-encoded via `encodeURIComponent`.   |
+| `utm_source`   | No       | Forwarded to `clickLink`.                                            |
+| `utm_campaign` | No       | Forwarded to `clickLink`.                                            |
+| `partner_id`   | No       | Your partner ID for analytics. Also forwarded to `clickLink`.        |
+| anything else  | No       | Any other query params are forwarded to the destination URL as well. |
 
 ## Analytics events
 
@@ -59,12 +59,23 @@ The entire banner is a single `<a>` tag sitting on top of the video. The bottom 
 
 **Video cropping at extreme aspect ratios.** `object-fit: cover` works well for 16:9-ish slots. In a very narrow or very wide container the main subject of the video will be cropped. Fixing this properly would require multiple video sources selected by a media query inside the iframe.
 
+## Install
+
+You need to install http server:
+
+```bash
+npm i -D http-server
+```
+
+Then reopen terminal window.
+
 ## Running locally
 
 ```bash
-npx serve .
-# then open http://localhost:3000/src/index.html
+http-server
+# then open http://localhost:8080/src/index.html
 ```
 
 Opening via `file://` won't work — browsers block autoplay for local files.
+
 # video-ad-test-project
