@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Демо — рекламный виджет</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        padding: 40px;
+      }
+
+      h1 {
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: #555;
+        margin-bottom: 30px;
+      }
+
+      .banner-wrap {
+        margin-bottom: 40px;
+      }
+
+      .banner-wrap h2 {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+
+      iframe {
+        display: block;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Partner Demo Page</h1>
+    <p>An example of embedding the ad widget via iframe with utm parameters and partner_id passed through.</p>
+
+    <div class="banner-wrap">
+      <h2>Small (540×340)</h2>
+      <iframe
+        src="./banner.html?clickLink=https%3A%2F%2Fwww.wikipedia.org%2F&utm_source=demo&utm_campaign=test&partner_id=42"
+        width="540"
+        height="340"
+        allow="autoplay"
+      ></iframe>
+    </div>
+
+    <div class="banner-wrap">
+      <h2>Medium (720×450)</h2>
+      <iframe
+        src="./banner.html?clickLink=https%3A%2F%2Fwww.wikipedia.org%2F&utm_source=demo&utm_campaign=test&partner_id=42"
+        width="720"
+        height="450"
+        allow="autoplay"
+      ></iframe>
+    </div>
+  </body>
+</html>
